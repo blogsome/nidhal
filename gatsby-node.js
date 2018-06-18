@@ -48,7 +48,8 @@ exports.createPages = ({ graphql, actions }) => {
 
         posts.forEach((edge, index) => {
           const next = index === 0 ? null : posts[index - 1].node;
-          const prev = index === posts.length - 1 ? null : posts[index + 1].node;
+          const prev =
+            index === posts.length - 1 ? null : posts[index + 1].node;
 
           createPage({
             path: edge.node.slug,
