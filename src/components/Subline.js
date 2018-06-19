@@ -9,6 +9,8 @@ const Line = styled.div`
   ${props => props.sectionTitle && 'text-align: center'};
 `;
 
-const Subline = props => <Line sectionTitle={props.sectionTitle}>{props.children}</Line>;
+const Subline = props => (
+  <Line sectionTitle={props.sectionTitle}>{props.children}</Line>
+);
 
 export default Subline;

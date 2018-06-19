@@ -2,11 +2,13 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
+
 import Layout from '../components/Layout';
 import Wrapper from '../components/Wrapper';
 import Header from '../components/Header';
 import Subline from '../components/Subline';
 import CommentSection from '../components/CommentSection';
+import SocialShare from '../components/SocialShare';
 import { media } from '../utils/media';
 
 import config from '../../config/SiteConfig';
@@ -57,6 +59,11 @@ const Post = props => {
             dangerouslySetInnerHTML={{
               __html: postNode.content.childMarkdownRemark.html,
             }}
+          />
+          <SocialShare
+            slug={postNode.slug}
+            title={postNode.title}
+            label="شارك"
           />
           <CommentSection slug={postNode.slug} facebook={facebook} />
         </Content>
