@@ -12,7 +12,6 @@ const CommentsWrapper = styled.div`
 
 const CommentSection = props => {
   const { slug, facebook } = props;
-  console.log(`${config.siteUrl}/${slug}`);
 
   return (
     <CommentsWrapper id="post-comments">

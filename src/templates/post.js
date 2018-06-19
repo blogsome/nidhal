@@ -39,8 +39,6 @@ const PostContent = styled.div`
 `;
 
 const Post = props => {
-  console.log(props.data);
-
   const postNode = props.data.contentfulBlogPost;
   const facebook = props.data.allContentfulMetaData.edges[0].node.fbAppId;
 
